@@ -1,4 +1,4 @@
-namespace AStar.Web;
+namespace AStar.Dev.Web;
 
 public class WeatherApiClient(HttpClient httpClient)
 {

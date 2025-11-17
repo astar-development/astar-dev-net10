@@ -1,34 +1,34 @@
 <Solution>
-    <Folder Name="/Solution Items/"/>
+    <Folder Name="/Solution Items/" />
     <Folder Name="/Solution Items/.github/">
-        <File Path=".github\codeql.yml"/>
-        <File Path=".github\copilot-instructions.md"/>
-        <File Path=".github\dependabot.yml"/>
+        <File Path=".github\codeql.yml" />
+        <File Path=".github\copilot-instructions.md" />
+        <File Path=".github\dependabot.yml" />
     </Folder>
     <Folder Name="/Solution Items/.github/instructions/">
-        <File Path=".github\instructions\blazor.instructions.md"/>
+        <File Path=".github\instructions\blazor.instructions.md" />
     </Folder>
     <Folder Name="/Solution Items/.github/prompts/">
-        <File Path=".github\prompts\astar.prompt.md"/>
-        <File Path=".github\prompts\xunit.prompt.md"/>
+        <File Path=".github\prompts\astar.prompt.md" />
+        <File Path=".github\prompts\xunit.prompt.md" />
     </Folder>
     <Folder Name="/Solution Items/.github/workflows/">
-        <File Path=".github\workflows\main_astar-dev.yml"/>
+        <File Path=".github\workflows\main_astar-dev.yml" />
     </Folder>
-    <Folder Name="/src/"/>
+    <Folder Name="/src/" />
     <Folder Name="/src/aspire/">
-        <Project Path="src/aspire/AStar.Web.AppHost/AStar.Web.AppHost.csproj"/>
-        <Project Path="src/aspire/AStar.Web.ServiceDefaults/AStar.Web.ServiceDefaults.csproj"/>
+        <Project Path="src/aspire/AStar.Web.AppHost/AStar.Web.AppHost.csproj" />
+        <Project Path="src/aspire/AStar.Web.ServiceDefaults/AStar.Web.ServiceDefaults.csproj" />
     </Folder>
-    <Folder Name="/src/modules/"/>
+    <Folder Name="/src/modules/" />
     <Folder Name="/src/modules/apis/">
-        <Project Path="src/modules/apis/AStar.Web.ApiService/AStar.Web.ApiService.csproj"/>
+        <Project Path="src/modules/apis/AStar.Web.ApiService/AStar.Web.ApiService.csproj" />
     </Folder>
     <Folder Name="/src/uis/">
-        <Project Path="src\uis\AStar.Web\AStar.Web.csproj"/>
+        <Project Path="src\uis\AStar.Dev.Web\AStar.Dev.Web.csproj" />
     </Folder>
-    <Folder Name="/test/"/>
+    <Folder Name="/test/" />
     <Folder Name="/test/aspire/">
-        <Project Path="test/aspire/AStar.Web.Tests/AStar.Web.Tests.csproj"/>
+        <Project Path="test/aspire/AStar.Web.Tests/AStar.Web.Tests.csproj" />
     </Folder>
 </Solution>
