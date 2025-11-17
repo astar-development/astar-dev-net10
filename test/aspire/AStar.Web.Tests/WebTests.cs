@@ -1,4 +1,5 @@
 using Microsoft.Extensions.Logging;
+using Projects;
 
 namespace AStar.Web.Tests;
 
@@ -13,7 +14,7 @@ public class WebTests
         var cancellationToken = new CancellationTokenSource(DefaultTimeout).Token;
 
         var appHost =
-            await DistributedApplicationTestingBuilder.CreateAsync<Projects.AStar_Web_AppHost>(cancellationToken);
+            await DistributedApplicationTestingBuilder.CreateAsync<AStar_Web_AppHost>(cancellationToken);
         appHost.Services.AddLogging(logging =>
         {
             logging.SetMinimumLevel(LogLevel.Debug);

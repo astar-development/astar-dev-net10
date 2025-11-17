@@ -1,4 +1,4 @@
-namespace AStar.Web.Web;
+namespace AStar.Web;
 
 public class WeatherApiClient(HttpClient httpClient)
 {
@@ -10,10 +10,7 @@ public class WeatherApiClient(HttpClient httpClient)
         await foreach (var forecast in httpClient.GetFromJsonAsAsyncEnumerable<WeatherForecast>("/weatherforecast",
                            cancellationToken))
         {
-            if (forecasts?.Count >= maxItems)
-            {
-                break;
-            }
+            if (forecasts?.Count >= maxItems) break;
 
             if (forecast is not null)
             {

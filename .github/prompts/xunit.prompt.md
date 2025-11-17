@@ -6,7 +6,8 @@ description: 'Get best practices for XUnit unit testing, including data-driven t
 
 # XUnit Best Practices
 
-Your goal is to help me write effective unit tests with XUnit.V3, covering both standard and data-driven testing approaches.
+Your goal is to help me write effective unit tests with XUnit.V3, covering both standard and data-driven testing
+approaches.
 
 ## Project Setup
 
@@ -48,7 +49,8 @@ Your goal is to help me write effective unit tests with XUnit.V3, covering both 
 
 ## Assertions
 
-- Use the `Shouldly` NuGet package for more readable assertions. Only use the xUnit built-in assertions when Shouldly does not provide the needed functionality.
+- Use the `Shouldly` NuGet package for more readable assertions. Only use the xUnit built-in assertions when Shouldly
+  does not provide the needed functionality.
 - Use `Assert.Equal` for value equality
 - Use `Assert.Same` for reference equality
 - Use `Assert.True`/`Assert.False` for boolean conditions
