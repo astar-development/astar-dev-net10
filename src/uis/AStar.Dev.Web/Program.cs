@@ -1,5 +1,5 @@
-using AStar.Web;
-using AStar.Web.Components;
+using AStar.Dev.Web;
+using AStar.Dev.Web.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
