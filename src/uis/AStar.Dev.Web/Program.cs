@@ -1,44 +1,20 @@
 using AStar.Dev.Web;
-using AStar.Dev.Web.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add service defaults & Aspire client integrations.
-builder.AddServiceDefaults();
+builder.AddApplicationServices();
 
-// Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+var app = builder.RemoveServerHeaderAndBuild();
 
-builder.Services.AddOutputCache();
+app.UseApplicationServices();
 
-builder.Services.AddHttpClient<WeatherApiClient>(client =>
+await app.RunAsync();
+
+#pragma warning disable S2094 // Classes should not be empty
+namespace AStar.Dev.Web
 {
-    // This URL uses "https+http://" to indicate HTTPS is preferred over HTTP.
-    // Learn more about service discovery scheme resolution at https://aka.ms/dotnet/sdschemes.
-    client.BaseAddress = new Uri("https+http://apiservice");
-});
-
-var app = builder.Build();
-
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error", true);
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    public class Program
+    {
+    }
 }
-
-app.UseHttpsRedirection();
-
-app.UseAntiforgery();
-
-app.UseOutputCache();
-
-app.MapStaticAssets();
-
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
-
-app.MapDefaultEndpoints();
-
-app.Run();
+#pragma warning restore S2094 // Classes should not be empty
