@@ -7,7 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Asp.Versioning.Mvc" Version="8.1.0"/>
+        <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0"/>
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0"/>
+        <PackageReference Include="TestableIO.System.IO.Abstractions" Version="22.0.16"/>
+        <PackageReference Include="TestableIO.System.IO.Abstractions.Wrappers" Version="22.0.16"/>
+        <PackageReference Include="NetEscapades.AspNetCore.SecurityHeaders" Version="1.2.0"/>
     </ItemGroup>
 
     <ItemGroup>
