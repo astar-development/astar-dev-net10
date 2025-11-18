@@ -1,5 +1,4 @@
-﻿
-namespace AStar.Dev.Web.Models;
+﻿namespace AStar.Dev.Web.Models;
 
 /// <summary>
 ///     Represents a classification of files, providing metadata about the type of files
@@ -50,4 +49,3 @@ public class FileClassification
     /// </summary>
     public bool? IncludeInSearch { get; set; }
 }
-

@@ -2,6 +2,7 @@
 // using AStar.Dev.Files.Api.Endpoints.Get.V1;
 // using AStar.Dev.Files.Classifications.Api;
 // using AStar.Dev.ServiceDefaults;
+
 using AStar.Dev.Web.Components;
 using Scalar.AspNetCore;
 
@@ -54,14 +55,14 @@ public static class WebApplicationExtensions
     {
         _ = app.UseExceptionHandler("/Error", true);
 
-        if(!app.Environment.IsDevelopment())
+        if (!app.Environment.IsDevelopment())
             _ = app.UseHsts();
 
         _ = app.UseHttpsRedirection();
 
-        HeaderPolicyCollection policyCollection = new HeaderPolicyCollection()
-                               .AddDefaultSecurityHeaders()
-                               .AddPermissionsPolicyWithDefaultSecureDirectives();
+        var policyCollection = new HeaderPolicyCollection()
+            .AddDefaultSecurityHeaders()
+            .AddPermissionsPolicyWithDefaultSecureDirectives();
 
         _ = app.UseSecurityHeaders(policyCollection);
 
@@ -75,7 +76,7 @@ public static class WebApplicationExtensions
         _ = app.MapControllers();
 
         _ = app.MapRazorComponents<App>()
-           .AddInteractiveServerRenderMode();
+            .AddInteractiveServerRenderMode();
         _ = app.MapOpenApi();
         _ = app.MapScalarApiReference();
 

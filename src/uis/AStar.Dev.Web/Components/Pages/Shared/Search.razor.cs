@@ -10,7 +10,7 @@ namespace AStar.Dev.Web.Components.Pages.Shared;
 
 public partial class Search : ComponentBase
 {
-    private string _gridClass = "background-color: var(--neutral-layer-3); padding: 4px; ";
+    private readonly string _gridClass = "background-color: var(--neutral-layer-3); padding: 4px; ";
     private List<FileClassification> FileClassifications { get; set; } = [];
 
     [Inject] private IFileClassificationsService FileClassificationsService { get; set; } = null!;
@@ -23,11 +23,11 @@ public partial class Search : ComponentBase
 
     [Parameter] public EventCallback<SearchModel> OnValidSubmit { get; set; }
 
-    private static string GetDaysText(int days) => days == 0 ? "Include all" : $"{days} days";
-
     private static IEnumerable<SearchType> SearchTypeOptions => Enum.GetValues<SearchType>();
 
     private static IEnumerable<SortOrder> SortOrderOptions => Enum.GetValues<SortOrder>();
+
+    private static string GetDaysText(int days) => days == 0 ? "Include all" : $"{days} days";
 
     private static string GetSearchTypeText(SearchType searchType) => searchType switch
     {
