@@ -50,14 +50,14 @@ public static class WebApplicationExtensions
     {
         _ = app.UseExceptionHandler("/Error", true);
 
-        if(!app.Environment.IsDevelopment())
+        if (!app.Environment.IsDevelopment())
             _ = app.UseHsts();
 
         _ = app.UseHttpsRedirection();
 
-        HeaderPolicyCollection policyCollection = new HeaderPolicyCollection()
-                               .AddDefaultSecurityHeaders()
-                               .AddPermissionsPolicyWithDefaultSecureDirectives();
+        var policyCollection = new HeaderPolicyCollection()
+            .AddDefaultSecurityHeaders()
+            .AddPermissionsPolicyWithDefaultSecureDirectives();
 
         _ = app.UseSecurityHeaders(policyCollection);
 
@@ -71,7 +71,7 @@ public static class WebApplicationExtensions
         _ = app.MapControllers();
 
         _ = app.MapRazorComponents<App>()
-           .AddInteractiveServerRenderMode();
+            .AddInteractiveServerRenderMode();
         _ = app.MapScalarApiReference();
 
         _ = app.MapDefaultEndpoints();

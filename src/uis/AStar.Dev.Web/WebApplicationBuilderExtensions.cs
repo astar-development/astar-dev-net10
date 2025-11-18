@@ -2,6 +2,7 @@
 // using AStar.Dev.Files.Classifications.Api;
 // using AStar.Dev.ServiceDefaults;
 // using AStar.Dev.Web.Services;
+
 using Azure.Monitor.OpenTelemetry.AspNetCore;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.FluentUI.AspNetCore.Components;
@@ -44,13 +45,12 @@ public static class WebApplicationBuilderExtensions
         _ = builder.Services.AddHealthChecks();
 
         _ = builder.Services.AddControllersWithViews()
-                            .AddMicrosoftIdentityUI();
+            .AddMicrosoftIdentityUI();
         // _ = builder.Services.AddScoped<IFileClassificationsService, FileClassificationsService>();
         // _ = builder.AddFileClassificationsApplicationServices();
         // _ = builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
-        _ = builder.Services.AddProblemDetails(options =>
-            options.CustomizeProblemDetails =
-                ctx => ctx.ProblemDetails.Extensions.Add("nodeId", Environment.MachineName));
+        _ = builder.Services.AddProblemDetails(options => options.CustomizeProblemDetails =
+            ctx => ctx.ProblemDetails.Extensions.Add("nodeId", Environment.MachineName));
 
         return builder;
     }
